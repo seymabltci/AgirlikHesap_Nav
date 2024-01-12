@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_activity_nav"
+    app:startDestination="@id/anasayfaFragment">
+
+    <fragment
+        android:id="@+id/anasayfaFragment"
+        android:name="com.seyma.agirlikhesap_nav.AnasayfaFragment"
+        android:label="fragment_anasayfa"
+        tools:layout="@layout/fragment_anasayfa" >
+        <action
+            android:id="@+id/anasayfaToMil"
+            app:destination="@id/milFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/milFragment"
+        android:name="com.seyma.agirlikhesap_nav.MilFragment"
+        android:label="fragment_mil"
+        tools:layout="@layout/fragment_mil" />
+</navigation>

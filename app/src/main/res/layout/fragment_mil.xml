@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MilFragment">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="61dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="61dp"
+        android:gravity="center"
+        android:text="Hesaplama Verileri"
+        android:textSize="34sp"
+        app:circularflow_radiusInDP="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/buttonBack"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:src="@drawable/back_button"
+        app:layout_constraintBottom_toBottomOf="@+id/textView"
+        app:layout_constraintEnd_toStartOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/milCap"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="81dp"
+        android:layout_marginTop="37dp"
+        android:layout_marginEnd="81dp"
+        android:gravity="center"
+        android:text="Mil Çapı"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/mm"
+        app:layout_constraintStart_toStartOf="@+id/buttonHesapla"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/mm"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginBottom="30dp"
+        android:gravity="center"
+        android:text="mm"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/milUzunluk"
+        app:layout_constraintStart_toEndOf="@+id/milCapGiris"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/milCapGiris"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="13dp"
+        android:ems="10"
+        android:hint="Mil Çapı"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toBottomOf="@+id/mm"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/mm"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/milUzunlukGiris"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:ems="10"
+        android:hint="Mil Uzunluğu"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/mm2"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginEnd="19dp"
+        android:gravity="center"
+        android:text="mm"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/milUzunluk"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/milUzunluk"
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="141dp"
+        android:layout_marginBottom="140dp"
+        android:gravity="center"
+        android:text="Mil Uzunluk"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/materyal"
+        app:layout_constraintStart_toStartOf="@+id/milUzunlukGiris"
+        app:layout_constraintTop_toTopOf="@+id/milCap"
+        tools:ignore="MissingConstraints" />
+
+
+    <TextView
+        android:id="@+id/materyal"
+        android:layout_width="188dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="42dp"
+        android:gravity="center"
+        android:text="Materyal"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.331"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/milUzunlukGiris"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/buttonHesapla"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginBottom="33dp"
+        android:backgroundTint="@color/general"
+        android:text="Hesapla"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/buttonReset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:layout_marginBottom="33dp"
+        android:backgroundTint="@color/darkred"
+        android:text="Reset"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/buttonHesapla"
+        tools:ignore="MissingConstraints" />
+
+    <Spinner
+        android:id="@+id/spinnerIn"
+        android:layout_width="170dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginBottom="59dp"
+        android:foregroundGravity="center"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/buttonHesapla"
+        app:layout_constraintEnd_toStartOf="@+id/gcm3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/materyal"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/gcm3"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="17dp"
+
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="128dp"
+        android:layout_marginBottom="59dp"
+        android:gravity="center"
+        android:text="g/cm3"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonReset"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/spinnerIn"
+        app:layout_constraintTop_toBottomOf="@+id/materyal"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/buttonTeklif"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginStart="33dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="32dp"
+        android:backgroundTint="@color/darkred"
+        android:text="Teklif İste"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/buttonReset"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textViewSonuc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="250dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/radius"
+        android:backgroundTint="@color/green"
+        android:gravity="center|right|center_horizontal"
+        android:text="0.61701"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/buttonTeklif"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
