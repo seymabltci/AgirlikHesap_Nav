@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity(){ //MainActivity Sınıfı: Bu sınıf, 
                                                       // activity_main.xml adındaki layout dosyasının öğelerine erişimi için kullanılır.
 
     private lateinit var malzemelerArrayList:ArrayList<Malzemeler>
-    private var adapter: AnasayfaFragment.MalzemelerAdapter
+    private lateinit var adapter: AnasayfaFragment.MalzemelerAdapter
 
 
     override fun onCreate(savedInstanceState: Bundle?){ // bu metot activity ilk oluştugunda çagrılır.
