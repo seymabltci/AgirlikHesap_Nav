@@ -1,6 +1,5 @@
 package com.seyma.agirlikhesap_nav
 
-import android.annotation.SuppressLint
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
@@ -23,13 +22,30 @@ class MainActivity : AppCompatActivity(){ //MainActivity Sınıfı: Bu sınıf, 
                                                       // activity_main.xml adındaki layout dosyasının öğelerine erişimi için kullanılır.
 
     private lateinit var malzemelerArrayList:ArrayList<Malzemeler>
+    val anasayfaFragment = AnasayfaFragment()
     private lateinit var adapter: AnasayfaFragment.MalzemelerAdapter
-
 
     override fun onCreate(savedInstanceState: Bundle?){ // bu metot activity ilk oluştugunda çagrılır.
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater) //ilk olarak binding kullanılarak inflate edilir. Binding özelligine atanır
         setContentView(binding.root)
+
+
+
+        // MainActivity içinde MyFragment'ı çağırma
+        anasayfaFragment.setMainActivityReference(this)
+        // AnasayfaFragment'a MainActivity referansını ileterek
+        // malzemelerAdapter sınıfına erişim sağlayabilirsiniz
+
+
+        // Fragment'ı ekran üzerine yerleştirme (örneğin, bir transaction kullanarak)
+        supportFragmentManager.beginTransaction().replace(R.id.constraintLayout, anasayfaFragment).commit() // R.id.fragmentContainer, fragmentın ekran üzerinde yer alacağı container'ın id'sidir.
+
+      ////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
 
 
         val navfragment =
@@ -56,7 +72,7 @@ class MainActivity : AppCompatActivity(){ //MainActivity Sınıfı: Bu sınıf, 
 
 
 
-
+////////////////////////////////////////////////////////////////////
 
 
 
@@ -115,7 +131,7 @@ class MainActivity : AppCompatActivity(){ //MainActivity Sınıfı: Bu sınıf, 
 
 
 
-
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
         binding.buttonMode.setOnClickListener {
 
             if (delegate.localNightMode== MODE_NIGHT_YES) {
