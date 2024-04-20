@@ -1,14 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
+        <group>
+               <item                                         
+                   android:id="@+id/anasayfaFragment"
+                   android:layout_width="wrap_content"       
+                   android:layout_height="wrap_content"      
+                   android:title="Ana Sayfa" />              
+               <item                                         
+                   android:id="@+id/boruFragment"            
+                   android:layout_width="wrap_content"       
+                   android:layout_height="wrap_content"      
+                   android:title="Boru" />                   
+               <item                                         
+                   android:id="@+id/kareDemirFragment"       
+                   android:layout_width="wrap_content"       
+                   android:layout_height="wrap_content"      
+                   android:title="Kare Demir" />             
+               <item                                         
+                   android:id="@+id/kosebentFragment"        
+                   android:layout_width="wrap_content"       
+                   android:layout_height="wrap_content"      
+                   android:title="Köşebent" />               
+               <item                                         
+                   android:id="@+id/milFragment"             
+                   android:layout_width="wrap_content"       
+                   android:layout_height="wrap_content"      
+                   android:title="Mil" />                    
+                                                             
+               <item                                         
+                   android:id="@+id/profilFragment"          
+                   android:layout_width="wrap_content"       
+                   android:layout_height="wrap_content"      
+                   android:title="Profil" />                 
+                                                             
+               <item                                         
+                   android:id="@+id/silmeLamaFragment"
+                   android:layout_width="wrap_content"       
+                   android:layout_height="wrap_content"      
+                   android:title="Silme/Lama" />
+            <item
+                android:id="@+id/TDemirFragment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:title="T Demir" />
+            <item
+                android:id="@+id/IDemirFragment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:title="I Demir" />
+            <item
+                android:id="@+id/UDemirFragment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:title="U Demir" />
+    </group>
+
 
     <item
-        android:id="@+id/anasayfaFragment"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:title="Ana Sayfa" />
-    <item
-        android:id="@+id/milFragment"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:title="Mil" />
+        android:title="">
+
+        <menu>
+            <item
+                android:id="@+id/iletisimFragment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:title="İletişim" />
+
+            <item
+                android:id="@+id/logInFragment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:title="Giriş" />
+        </menu>
+    </item>
+
+
+
+
+
+
+
+
+
+
+                                                                        
+
+        
+        
+
+
 </menu>

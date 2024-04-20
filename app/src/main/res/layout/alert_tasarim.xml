@@ -3,19 +3,48 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="70dp">
+    android:layout_height="wrap_content">
 
     <EditText
         android:id="@+id/editTextPhone"
         android:layout_width="221dp"
         android:layout_height="48dp"
-        android:layout_marginStart="20dp"
+        android:background="@drawable/edittext_border"
         android:ems="10"
-        android:hint="Numaranız"
+        android:hint="*5550000000"
         android:inputType="phone"
+        android:paddingLeft="10dp"
+        app:layout_constraintStart_toStartOf="@+id/editTextName"
+        app:layout_constraintTop_toBottomOf="@+id/editTextName"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/editTextName"
+        android:layout_width="221dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/edittext_border"
+        android:ems="10"
+        android:hint="*İsim"
+        android:inputType="text"
+        android:paddingLeft="5dp"
+        app:layout_constraintStart_toStartOf="@+id/editTextCompany"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/editTextCompany"
+        android:layout_width="221dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/edittext_border"
+        android:ems="10"
+        android:hint="*Firma Adı"
+        android:inputType="text"
+        android:paddingLeft="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.5" />
-
+        app:layout_constraintTop_toBottomOf="@+id/editTextPhone"
+        tools:ignore="MissingConstraints" />
 </androidx.constraintlayout.widget.ConstraintLayout>

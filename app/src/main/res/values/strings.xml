@@ -2,4 +2,12 @@
     <string name="app_name">AgirlikHesap_Nav</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="ipn">IPN</string>
+    <string name="Message">Message</string>
+    <string name="bildirim_gonder">Bildirim Gönder</string>
+    <string name="email">Email</string>
+    <string name="ifre">Şifre</string>
+    <string name="sifre">Şifre</string>
+    <string name="giris">Giriş</string>
 </resources>

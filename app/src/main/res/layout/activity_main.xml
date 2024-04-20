@@ -20,23 +20,27 @@
             android:background="@color/general"
             android:minHeight="?attr/actionBarSize"
             android:theme="?attr/actionBarTheme"
+            android:titleTextColor="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:titleTextColor="@color/white"
+
             tools:ignore="MissingConstraints" />
 
         <ImageButton
-            android:id="@+id/buttonMode"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/buttonPast"
+            android:layout_width="45dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
             android:background="@color/general"
-            android:src="@drawable/backlight"
+            android:src="@drawable/bag3"
             app:layout_constraintBottom_toBottomOf="@+id/toolbar"
             app:layout_constraintEnd_toEndOf="@+id/toolbar"
-            app:layout_constraintTop_toTopOf="@+id/toolbar" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
 
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/navfragment"
@@ -55,12 +59,15 @@
     <com.google.android.material.navigation.NavigationView
 
         android:id="@+id/navView"
-        android:layout_width="250dp"
+        android:layout_width="240dp"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-
         android:fitsSystemWindows="true"
-        app:menu="@menu/menu"/>
+        app:itemTextColor="@color/text_color"
+        app:menu="@menu/menu"
+        app:theme="@style/NavigationViewTheme">
+
+    </com.google.android.material.navigation.NavigationView>
 
 
 </androidx.drawerlayout.widget.DrawerLayout>

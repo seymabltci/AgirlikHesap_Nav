@@ -1,12 +1,13 @@
 package com.seyma.agirlikhesap_nav
 
+import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.app.AppCompatDelegate.MODE_NIGHT_NO
-import androidx.appcompat.app.AppCompatDelegate.MODE_NIGHT_YES
+import androidx.core.content.ContextCompat
 import androidx.core.view.GravityCompat
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI
@@ -19,10 +20,16 @@ class MainActivity : AppCompatActivity(){ //MainActivity Sınıfı: Bu sınıf, 
                                                       // tanımlandı. Bu özellik, ViewBinding kullanılarak
                                                       // activity_main.xml adındaki layout dosyasının öğelerine erişimi için kullanılır.
 
+
+
+
+    @SuppressLint("UseCompatLoadingForDrawables")
     override fun onCreate(savedInstanceState: Bundle?){ // bu metot activity ilk oluştugunda çagrılır.
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater) //ilk olarak binding kullanılarak inflate edilir. Binding özelligine atanır
         setContentView(binding.root)
+
+
 
         val navfragment =
             supportFragmentManager.findFragmentById(R.id.navfragment) as NavHostFragment //activitenin içindeki NavHostFragment ı bulmak için kullanılr.
@@ -37,7 +44,9 @@ class MainActivity : AppCompatActivity(){ //MainActivity Sınıfı: Bu sınıf, 
         val ImageViewLogo = baslik.findViewById(R.id.imageViewLogo) as ImageView //R.layout.navigation_baslik bu klasör içindeki imageViewLogo adındaki ImageView e erişti
         ImageViewLogo.setImageDrawable(resources.getDrawable(R.drawable.hsmlogo, null)) // erişilen resmi ekledi
 
+
         binding.toolbar.title = ("Ağırlık Hesaplama") //toolbar ın başlıgı
+        binding.toolbar.setTitleTextColor(ContextCompat.getColor(this, R.color.white))
 
 
         //Navigation Drawer'ın (açılır menü) görünümünü, davranışını ve senkronizasyonunu yapılandırmak için kullanılır.
@@ -45,27 +54,31 @@ class MainActivity : AppCompatActivity(){ //MainActivity Sınıfı: Bu sınıf, 
         binding.drawer.addDrawerListener(toggle)
         toggle.syncState()
 
-
-        binding.buttonMode.setOnClickListener {
-
-            if (delegate.localNightMode== MODE_NIGHT_YES) {
-                delegate.localNightMode= MODE_NIGHT_NO
-            }
-            else   {
-                delegate.localNightMode= MODE_NIGHT_YES
-            }
+        binding.buttonPast.setOnClickListener{
+            startActivity(Intent(this, HesapListesiActivity::class.java))
         }
+
+
+
+
     }
+        @Deprecated("Deprecated in Java")
         override fun onBackPressed() { //telefondaki geri tusuna basıldıgında yapılacak işlemler
             super.onBackPressed()
 
             if (binding.drawer.isDrawerOpen(GravityCompat.START)) {
                 binding.drawer.closeDrawer((GravityCompat.START))
             } else {
-                onBackPressedDispatcher.onBackPressed()
+                startActivity(Intent(this, MainActivity::class.java))
             }
         }
+
+
+
+
     }
+
+
 
 
 

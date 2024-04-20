@@ -13,10 +13,85 @@
         <action
             android:id="@+id/anasayfaToMil"
             app:destination="@id/milFragment" />
+        <action
+            android:id="@+id/anasayfaToProfil"
+            app:destination="@id/profilFragment" />
+        <action
+            android:id="@+id/anasayfaToBoru"
+            app:destination="@id/boruFragment" />
+        <action
+            android:id="@+id/anasayfaToKare"
+            app:destination="@id/kareDemirFragment" />
+        <action
+            android:id="@+id/anasayfaToSilme"
+            app:destination="@id/silmeLamaFragment" />
+        <action
+            android:id="@+id/anasayfaToKosebent"
+            app:destination="@id/kosebentFragment" />
+        <action
+            android:id="@+id/anasayfaToSac"
+            app:destination="@id/sacFragment" />
+        <action
+            android:id="@+id/anasayfaToT"
+            app:destination="@id/TDemirFragment" />
+        <action
+            android:id="@+id/anasayfaToI"
+            app:destination="@id/IDemirFragment" />
+        <action
+            android:id="@+id/anasayfaToU"
+            app:destination="@id/UDemirFragment2" />
     </fragment>
     <fragment
         android:id="@+id/milFragment"
         android:name="com.seyma.agirlikhesap_nav.MilFragment"
         android:label="fragment_mil"
         tools:layout="@layout/fragment_mil" />
+    <fragment
+        android:id="@+id/profilFragment"
+        android:name="com.seyma.agirlikhesap_nav.ProfilFragment"
+        android:label="ProfilFragment" />
+    <fragment
+        android:id="@+id/boruFragment"
+        android:name="com.seyma.agirlikhesap_nav.BoruFragment"
+        android:label="BoruFragment" />
+    <fragment
+        android:id="@+id/kareDemirFragment"
+        android:name="com.seyma.agirlikhesap_nav.KareDemirFragment"
+        android:label="KareDemirFragment" />
+    <fragment
+        android:id="@+id/silmeLamaFragment"
+        android:name="com.seyma.agirlikhesap_nav.SilmeLamaFragment"
+        android:label="SilmeLamaFragment" />
+    <fragment
+        android:id="@+id/kosebentFragment"
+        android:name="com.seyma.agirlikhesap_nav.KosebentFragment"
+        android:label="KosebentFragment" />
+    <fragment
+        android:id="@+id/sacFragment"
+        android:name="com.seyma.agirlikhesap_nav.SacFragment"
+        android:label="SacFragment" />
+    <fragment
+        android:id="@+id/TDemirFragment"
+        android:name="com.seyma.agirlikhesap_nav.TDemirFragment"
+        android:label="TDemirFragment" />
+    <fragment
+        android:id="@+id/iletisimFragment"
+        android:name="com.seyma.agirlikhesap_nav.IletisimFragment"
+        android:label="fragment_iletisim"
+        tools:layout="@layout/fragment_iletisim" />
+    <fragment
+        android:id="@+id/IDemirFragment"
+        android:name="com.seyma.agirlikhesap_nav.IDemirFragment"
+        android:label="fragment_i_demir"
+        tools:layout="@layout/fragment_i_demir" />
+    <fragment
+        android:id="@+id/UDemirFragment2"
+        android:name="com.seyma.agirlikhesap_nav.UDemirFragment"
+        android:label="UDemirFragment" />
+    <fragment
+        android:id="@+id/logInFragment"
+        android:name="com.seyma.agirlikhesap_nav.LogInFragment"
+        android:label="fragment_log_in"
+        tools:layout="@layout/fragment_log_in" />
+
 </navigation>

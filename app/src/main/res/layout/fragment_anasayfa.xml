@@ -7,20 +7,10 @@
     android:orientation="vertical"
     tools:context=".AnasayfaFragment">
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/buttonMil"
-        android:layout_width="116dp"
-        android:layout_height="58dp"
-        android:layout_marginStart="52dp"
-        android:layout_marginTop="96dp"
-        android:backgroundTint="@color/general"
-        android:text="Mil"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:cornerRadius="10dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
+    <androidx.recyclerview.widget.RecyclerView
+
+        android:id="@+id/RecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

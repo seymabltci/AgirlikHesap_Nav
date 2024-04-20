@@ -12,6 +12,7 @@ class MateryalListesi(mcontext: Context) {
 
     val materyalList: ArrayList<String> = ArrayList()  // Örnek bir ArrayList oluşturuldu
     var veriAdaptoru: ArrayAdapter<String>
+
     //veriAdaptoru adlı bir ArrayAdapter<String> öğesi, materyalList'i
     // bir Spinner veya başka bir liste görünümü ile bağlamak için kullanılır.
     // Bu adaptör, malzeme listesini içeren bir ArrayAdapter'dir.
@@ -22,20 +23,24 @@ class MateryalListesi(mcontext: Context) {
 
     init { //init : sınıf başlatılınca yapılacak işlemlerde kullanılır.
 
-       // olusturulan arrayListe materyaller eklenir
-        materyalList.add("Demir")
-        materyalList.add("DKP Sac")
-        materyalList.add("Paslanmaz Çelik")
+        // olusturulan arrayListe materyaller eklenir
+        materyalList.add("Çelik")
+        materyalList.add("Krom")
+        materyalList.add("Paslanmaz 304/310")
+        materyalList.add("Paslanmaz 316/321")
+        materyalList.add("Paslanmaz 410/430")
         materyalList.add("Alüminyum")
+        materyalList.add("DKP Sac")
 
         veriAdaptoru = ArrayAdapter( // ArrayAdapter, bir veri kümesini bir Spinner, ListView veya diğer liste görünümleriyle bağlamak için kullanılan bir adaptör sınıfıdır.
-        mcontext, //yukarıda sınıfı tanımlarken girilen parametreyi context olarak alır
-        android.R.layout.simple_list_item_1, //basit bir liste öğesini göstermek için kullanılan bir sistem içi layout kaynağıdır.
-        android.R.id.text1,  //Bu kaynak ID si, adaptörün her öğesinin gösterildiği metni temsil eden öğedir.
-        materyalList) //baglanacak olan veri kümesi liste vb
+            mcontext, //yukarıda sınıfı tanımlarken girilen parametreyi context olarak alır
+            android.R.layout.simple_list_item_1, //basit bir liste öğesini göstermek için kullanılan bir sistem içi layout kaynağıdır.
+            android.R.id.text1,  //Bu kaynak ID si, adaptörün her öğesinin gösterildiği metni temsil eden öğedir.
+            materyalList) //baglanacak olan veri kümesi liste vb
 
     }
-
+    // Array list'e öğe eklemek için bir metod
+    // fun addItem(item: String) { materyalList.add(item) }
     interface OnYogunlukChangeListener {
 
         fun onYogunlukChanged(yogunluk: Double)
@@ -76,21 +81,25 @@ class MateryalListesi(mcontext: Context) {
                 yogunluk =
                     when (secilenOge) {
 
-                    "Demir" -> 7.86
-                    "DKP Sac" -> 8.0
-                    "Paslanmaz Çelik" -> 7.95
-                    "Alüminyum" -> 2.72
+                        "Çelik" -> 7.85
+                        "Krom" -> 7.1
+                        "Paslanmaz 304/310" -> 7.92
+                        "Paslanmaz 316/321" -> 7.94
+                        "Paslanmaz 410/430" -> 7.71
+                        "Alüminyum" -> 2.73
+                        "DKP Sac" -> 8.0
 
-                    else -> 7.86
 
-              }
+                        else -> 7.85
+
+                    }
                 // Yoğunluk değişikliği dinleyiciye bildirilir
                 yogunlukList?.onYogunlukChanged(yogunluk)
-              }
+            }
 
             override fun onNothingSelected(parent: AdapterView<*>?) { //spinnerdan bir deger seçilmezse
 
-                yogunluk = 7.86
+                yogunluk = 7.85
 
                 // Yoğunluk değişikliği dinleyiciye bildirilir
                 yogunlukList?.onYogunlukChanged(yogunluk)

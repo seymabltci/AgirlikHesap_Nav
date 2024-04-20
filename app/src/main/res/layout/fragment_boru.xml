@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MilFragment">
+
+    <EditText
+        android:id="@+id/adetGiris"
+        android:layout_width="310dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/edittext_border"
+        android:ems="10"
+        android:hint="Adet"
+        android:inputType="numberDecimal"
+        android:paddingLeft="10dp"
+        android:textColor="@color/text_color"
+        android:textColorHint="@color/hint_color"
+        app:layout_constraintEnd_toStartOf="@+id/olcu3"
+        app:layout_constraintStart_toStartOf="@+id/boruUzunlukGiris"
+        app:layout_constraintTop_toBottomOf="@+id/boruUzunlukGiris"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textViewSonuc"
+        android:layout_width="310dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/edittext_border"
+        android:gravity="center|left"
+        android:paddingLeft="10dp"
+        android:text="0.61701"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/adetGiris"
+        app:layout_constraintStart_toStartOf="@+id/adetGiris"
+        app:layout_constraintTop_toBottomOf="@+id/adetGiris"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textViewToplamSonuc"
+        android:layout_width="310dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/edittext_border"
+        android:gravity="center|left"
+        android:paddingLeft="10dp"
+        android:text="0.61701"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/textViewSonuc"
+        app:layout_constraintStart_toStartOf="@+id/textViewSonuc"
+        app:layout_constraintTop_toBottomOf="@+id/textViewSonuc"
+        tools:ignore="MissingConstraints" />
+
+    <Spinner
+        android:id="@+id/spinnerOlcu"
+        android:layout_width="88dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/edittext_border"
+        android:foregroundGravity="center"
+        android:gravity="center"
+        android:padding="2dp"
+        android:textColor="@color/text_color"
+        android:textColorHint="@color/hint_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/TextViewMateryal"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:src="@drawable/drop_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/spinnerOlcu"
+        app:layout_constraintEnd_toEndOf="@+id/spinnerOlcu"
+        app:layout_constraintTop_toTopOf="@+id/spinnerOlcu" />
+
+    <TextView
+        android:id="@+id/TVMateryalAd"
+        android:layout_width="91dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="68dp"
+        android:gravity="center"
+        android:text="7.85 gr/cm3"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="@+id/spinnerIn"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerIn"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/TextViewMateryal"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="11dp"
+        android:background="@drawable/edittext_border"
+        android:gravity="center"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:text="  7.85 gr/cm3  "
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/spinnerOlcu"
+        app:layout_constraintStart_toStartOf="@+id/spinnerIn"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerIn"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/buttonBack"
+        android:layout_width="42dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/back_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+
+    <EditText
+        android:id="@+id/boruCapGiris"
+        android:layout_width="310dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="22dp"
+        android:background="@drawable/edittext_border"
+        android:ems="10"
+        android:hint="Boru Çapı (A)"
+        android:inputType="numberDecimal"
+        android:paddingLeft="10dp"
+        android:textColor="@color/text_color"
+        android:textColorHint="@color/hint_color"
+        app:layout_constraintEnd_toStartOf="@+id/olcu1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TVMateryalAd"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/olcu3"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:background="@drawable/edittext_border"
+        android:gravity="center"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:text="mm"
+        android:textColor="@color/text_color"
+        android:textColorHint="@color/text_color"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/olcu2"
+        app:layout_constraintStart_toEndOf="@+id/boruUzunlukGiris"
+        app:layout_constraintTop_toTopOf="@+id/boruUzunlukGiris"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/olcu2"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:background="@drawable/edittext_border"
+        android:gravity="center"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:text="mm"
+        android:textColor="@color/text_color"
+        android:textColorHint="@color/text_color"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/olcu1"
+        app:layout_constraintStart_toEndOf="@+id/boruEtKGiris"
+        app:layout_constraintTop_toTopOf="@+id/boruEtKGiris"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/boruUzunlukGiris"
+        android:layout_width="310dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/edittext_border"
+        android:ems="10"
+        android:hint=" Boru Uzunluğu (L)"
+        android:inputType="numberDecimal"
+        android:paddingLeft="10dp"
+        android:textColorHint="@color/hint_color"
+        app:layout_constraintEnd_toStartOf="@+id/olcu3"
+        app:layout_constraintStart_toStartOf="@+id/boruEtKGiris"
+        app:layout_constraintTop_toBottomOf="@+id/boruEtKGiris"
+        tools:ignore="MissingConstraints,TouchTargetSizeCheck" />
+
+    <EditText
+        android:id="@+id/boruEtKGiris"
+        android:layout_width="310dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/edittext_border"
+        android:ems="10"
+        android:hint="Boru Et Kalınlığı (t)"
+        android:inputType="numberDecimal"
+        android:paddingLeft="10dp"
+        android:textColorHint="@color/hint_color"
+        app:layout_constraintEnd_toStartOf="@+id/olcu2"
+        app:layout_constraintStart_toStartOf="@+id/boruCapGiris"
+        app:layout_constraintTop_toBottomOf="@+id/boruCapGiris"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/olcu1"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginEnd="34dp"
+        android:background="@drawable/edittext_border"
+        android:gravity="center"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:text="mm"
+        android:textColor="@color/text_color"
+        android:textColorHint="@color/text_color"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/boruCapGiris"
+        app:layout_constraintTop_toTopOf="@+id/boruCapGiris"
+        tools:ignore="MissingConstraints" />
+
+    <Spinner
+        android:id="@+id/spinnerIn"
+        android:layout_width="185dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/edittext_border"
+        android:foregroundGravity="center"
+        android:gravity="center"
+        android:spinnerMode="dropdown"
+        android:textColor="@color/text_color"
+        android:textColorHint="@color/text_color"
+        android:drawableEnd="@drawable/drop_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/drop_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/spinnerIn"
+        app:layout_constraintEnd_toEndOf="@+id/spinnerIn"
+        app:layout_constraintTop_toTopOf="@+id/spinnerIn" />
+
+    <Button
+        android:id="@+id/buttonHesapla"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="40dp"
+        android:backgroundTint="@color/general"
+        android:text="Hesapla"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/buttonTeklif"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:backgroundTint="@color/darkred"
+        android:text="Listeye Ekle"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/buttonReset"
+        app:layout_constraintTop_toTopOf="@+id/buttonReset"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/buttonReset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:backgroundTint="@color/darkred"
+        android:text="Reset"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/buttonHesapla"
+        app:layout_constraintTop_toTopOf="@+id/buttonHesapla"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="149dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/boruic"
+        app:layout_constraintStart_toEndOf="@+id/buttonBack"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
